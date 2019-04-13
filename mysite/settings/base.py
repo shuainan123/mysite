@@ -116,10 +116,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"meida")
 CKEDITOR_UPLOAD_PATH = 'upload/'
 
 CKEDITOR_CONFIGS = {
-    'default':{},
-    'comment_ckeditor':{
+    'default': {},
+    'comment_ckeditor': {
         'toolbar': 'custom',
-        'toolbar_custom':[
+        'toolbar_custom': [
             ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript'],
             ["TextColor", "BGColor", 'RemoveFormat'],
             ['NumberedList', 'BulletedList'],
@@ -128,7 +128,7 @@ CKEDITOR_CONFIGS = {
         ],
         'width': 'auto',
         'height': '180',
-        'tabSpces': 4,
+        'tabSpaces': 4,
         'removePlugins': 'elementspath',
         'resize_enabled': False,
     }
