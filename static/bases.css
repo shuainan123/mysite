@@ -24,3 +24,9 @@ div.website-info{
 div.website-info p{
     margin-bottom: 0;
 }
+
+.page-bottom{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+}

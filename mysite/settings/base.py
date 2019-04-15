@@ -58,7 +58,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'user.context_processors.login_modal_form',
             ],
         },
     },
@@ -144,3 +143,9 @@ CACHES = {
         'LOCATION': 'my_cache_table',
     }
 }
+
+# QQ登录配置
+QQ_APP_ID = '101571070'
+QQ_APP_KEY = os.environ['QQ_APP_KEY']
+QQ_REDIRECT_URL = 'http://lynblog.top/user/login_by_qq'
+QQ_STATE = 'lynblog'
