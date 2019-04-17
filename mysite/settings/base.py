@@ -110,7 +110,7 @@ STATICFILES_DIRS = [
 ]
 
 # media
-MEDIA_URL = '/media/'
+MEDIA_URL = '/meida/'
 MEDIA_ROOT = os.path.join(BASE_DIR,"meida")
 
 # 配置ckeditor
