@@ -9,7 +9,7 @@ class OAuthRelationship(models.Model):
     OAUTH_TYPE_CHOICES = (
         (0, "QQ"),
         (1, "WeChat"),
-        (2, "Sina"),
+        (2,"Sina"),
         (3, "Github"),
     )
     oauth_type = models.IntegerField(default=0, choices=OAUTH_TYPE_CHOICES)

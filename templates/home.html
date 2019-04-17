@@ -7,7 +7,7 @@
 
 {% block header_extends %}
     <link rel="stylesheet" href="{% static 'home.css' %}">
-    <script src="//cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
 {% endblock %}
 
 {% block nav_home_active %}active{% endblock %}
@@ -42,11 +42,11 @@
         </ul>
     </div>
     <div class="hot-data">
-    <h3>7天热门博客</h3>
+        <h3>7天热门博客</h3>
         <ul>
             {% for hot_blog in hot_blogs_for_7_days %}
                 <li><a href="{% url 'blog_detail' hot_blog.id %}">{{ hot_blog.title }}
-                    </a>({{ hot_blog.read_num_sum }})</li>
+                </a>({{ hot_blog.read_num_sum }})</li>
             {% empty %}
                 <li>7天暂时没有热门博客</li>
             {% endfor %}

@@ -19,7 +19,7 @@
                                 {% for field in login_form %}
                                     <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                                     {% if field.id_for_label == 'id_password' %}
-                                        (<a href="{% url 'forgot_password' %}" tabindex=-1 ">忘记密码</a>)
+                                        (<a href="{% url 'forgot_password' %}" tabindex= -1 ">忘记密码</a>)
                                     {% endif %}
                                     {{ field }}
                                     <p class="text-danger">{{ field.errors.as_text }}</p>

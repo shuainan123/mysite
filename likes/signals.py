@@ -17,4 +17,5 @@ def send_notification(sender, instance, **kwargs):
             strip_tags(comment.text)
         )
     recipient = instance.content_object.get_user()
-    notify.send(instance.user, recipient=recipient, verb=verb, action_object=instance)
+    url = instance.content_object.get_url()
+    notify.send(instance.user, recipient=recipient, verb=verb, action_object=instance, url=url)
