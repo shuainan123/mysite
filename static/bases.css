@@ -11,6 +11,7 @@ ul{
 ul.navbar-right{
     margin-right: 0;
 }
+
 div.footer{
     margin-top: 3em;
     background-color: #eee;
@@ -29,4 +30,8 @@ div.website-info p{
     position:absolute;
     bottom:0;
     width: 100%;
+}
+
+.unread-count{
+    background-color: #d9534f!important;
 }

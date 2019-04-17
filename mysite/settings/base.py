@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     'comment',
     'likes',
     'user',
+    'notifications',
+    'my_notifications',
 
 ]
 
@@ -102,23 +104,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_collected')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"static"),
 ]
 
 # media
-MEDIA_URL = '/meida/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,"meida")
 
 # 配置ckeditor
 CKEDITOR_UPLOAD_PATH = 'upload/'
 
 CKEDITOR_CONFIGS = {
-    'default': {},
-    'comment_ckeditor': {
+    'default':{},
+    'comment_ckeditor':{
         'toolbar': 'custom',
-        'toolbar_custom': [
+        'toolbar_custom':[
             ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript'],
             ["TextColor", "BGColor", 'RemoveFormat'],
             ['NumberedList', 'BulletedList'],
@@ -127,7 +128,7 @@ CKEDITOR_CONFIGS = {
         ],
         'width': 'auto',
         'height': '180',
-        'tabSpaces': 4,
+        'tabSpces': 4,
         'removePlugins': 'elementspath',
         'resize_enabled': False,
     }
@@ -149,3 +150,8 @@ QQ_APP_ID = '101571070'
 QQ_APP_KEY = os.environ['QQ_APP_KEY']
 QQ_REDIRECT_URL = 'http://lynblog.top/user/login_by_qq'
 QQ_STATE = 'lynblog'
+
+# django-notifications-hq设置
+DJANGO_NOTIFICATIONS_CONFIG = {
+    'USE_JSONFIELD': True
+}
