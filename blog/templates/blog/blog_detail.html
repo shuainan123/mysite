@@ -144,7 +144,6 @@
         function numFormat(num) {
                 return ('00' + num).substr(-2);
             }
-
         function timeFormat(timestamp){
                 var datetime = new Date(timestamp * 1000);
                 var year = datetime.getFullYear();
@@ -225,7 +224,6 @@
             });
             return false;
         });
-
         function likeChange(obj, content_type, object_id) {
             var is_like = obj.getElementsByClassName('active').length == 0
             $.ajax({
@@ -263,6 +261,11 @@
                     console.log(xhr)
                 }
             });
+        }
+        if(window.location.hash){
+            $('html').animate({
+                scrollTop:$(window.location.hash).offset().top - 60
+            }, 500);
         }
     </script>
 {% endblock %}
